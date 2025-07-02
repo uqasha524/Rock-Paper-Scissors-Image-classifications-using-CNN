@@ -99,7 +99,6 @@ models = {
        1     0.9970    0.9880    0.9925       333
        2     0.9884    0.9855    0.9870       346
 
-accuracy                         0.9883      1028
 
 
 ### 🤖 Artificial Neural Network (ANN) Results
@@ -110,9 +109,10 @@ loss: 9.6035e-04
 
 
 > 📌 Although ANN achieved perfect training accuracy, this indicates possible overfitting, highlighting why CNNs are more suitable for image-based tasks.
+> 
 
 
-```
+
 ## 🧠 Why CNN?
 
 CNNs were ultimately preferred because:
@@ -133,7 +133,7 @@ After applying data augmentation and tuning:
 
 ---
 
-## 🛠️ Requirements
+```## 🛠️ Requirements
 
 > ⚠️ **Note:** Please use **Python 3.9 to 3.12**.  
 > TensorFlow is **not supported** in Python versions above 3.12.
