@@ -31,6 +31,7 @@ We used an image dataset containing labeled hand gesture images:
 
 ---
 
+```plaintext
 Dataset/
 ├── train/
 │ ├── rock/
@@ -44,26 +45,103 @@ Dataset/
 ├── rock/
 ├── paper/
 └── scissors/
+```
+---
+
 
 ---
 
-## 📁 Files Overview  
+## 📁 Files Overview
 
+### 📂 CNN/  
 The `CNN/` folder contains all files related to the Convolutional Neural Network implementation:
-
 - **`cnn.ipynb`** – This Jupyter Notebook includes all code for:
   - Training the CNN model  
   - Performing real-time predictions  
   - Evaluating the model  
-  - Visualizing performance metrics  
+  - Visualizing performance  
 
-- **Saved Keras model files** – After training, the best-performing models (based on accuracy) are saved in this folder for later use.
+- **Saved Keras model files** – Best-performing models are saved after training.  
 
-- **Image Augmentation** – We applied various image augmentation techniques (e.g., rotation, zoom, flip) to artificially expand the training dataset. This helped demonstrate how:
-  - Augmentation increases dataset diversity  
-  - Accuracy improves  
-  - Overfitting is reduced  
+- **Image Augmentation** – Various techniques (rotation, zoom, flip, etc.) were used to:
+  - Expand dataset diversity  
+  - Improve accuracy  
+  - Reduce overfitting  
 
-These files showcase both the process and results of training robust image classification models using CNNs.
+### 📂 Machine_Learning/  
+The `Machine_Learning/` folder contains:
+- **`ml.ipynb`** – A complete ML pipeline including:
+  - Image preprocessing & path extraction  
+  - Saving labels and paths to Excel  
+  - Feature extraction  
+  - Standardization  
+  - Model training & evaluation  
+
+---
+
+## 🔬 Traditional ML Models  
+
+We trained several ML models using extracted image features:
+```python
+models = {
+    "Logistic Regression": LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=1000),
+    "SVM (RBF Kernel)": SVC(kernel='rbf'),
+    "Random Forest": RandomForestClassifier(),
+    "k-NN": KNeighborsClassifier(n_neighbors=5),
+    "Decision Tree": DecisionTreeClassifier(),
+}
+
+🔍 Evaluating: SVM (RBF Kernel)
+Training Accuracy: 0.9995  
+Test Accuracy:     0.9883  
+
+Classification Report (Test Data):
+              precision    recall  f1-score   support
+           0     0.9802    0.9914    0.9858       349
+           1     0.9970    0.9880    0.9925       333
+           2     0.9884    0.9855    0.9870       346
+
+    accuracy                         0.9883      1028
+   macro avg     0.9885    0.9883    0.9884      1028
+weighted avg     0.9884    0.9883    0.9883      1028
+
+129/129 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 1.0000 - loss: 9.6035e-04  
+val_accuracy: 0.9805 - val_loss: 0.0763
+```
+---
+
+## 🧠 Why CNN?
+
+CNNs were ultimately preferred because:
+
+- 🚫 No need for manual feature extraction  
+- 📈 Better performance on unseen image data  
+- 🧭 Automatically learn spatial hierarchies from raw pixels  
+- 💪 More scalable and robust for real-world applications  
+
+---
+
+## 📊 CNN Final Results
+
+After applying data augmentation and tuning:
+
+- ✅ **Training Accuracy**: 99.98%  
+- ✅ **Validation Accuracy**: 100%  
+
+---
+
+## 🛠️ Requirements
+
+> ⚠️ **Note:** Please use **Python 3.9 to 3.12**.  
+> TensorFlow is **not supported** in Python versions above 3.12.
+
+- Python 3.9–3.12  
+- TensorFlow / Keras  
+- NumPy  
+- Pandas  
+- Matplotlib
+- Seaborn
+- OpenCV (optional)
+
 
 
