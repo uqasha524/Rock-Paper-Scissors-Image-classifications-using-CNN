@@ -133,7 +133,7 @@ After applying data augmentation and tuning:
 
 ---
 
-```## 🛠️ Requirements
+## 🛠️ Requirements
 
 > ⚠️ **Note:** Please use **Python 3.9 to 3.12**.  
 > TensorFlow is **not supported** in Python versions above 3.12.
