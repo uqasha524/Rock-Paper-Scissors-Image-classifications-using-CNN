@@ -90,26 +90,29 @@ models = {
     "k-NN": KNeighborsClassifier(n_neighbors=5),
     "Decision Tree": DecisionTreeClassifier(),
 }
-
-🔍 Evaluating: SVM (RBF Kernel)
-Training Accuracy: 0.9995  
-Test Accuracy:     0.9883  
-
-Classification Report (Test Data):
-              precision    recall  f1-score   support
-           0     0.9802    0.9914    0.9858       349
-           1     0.9970    0.9880    0.9925       333
-           2     0.9884    0.9855    0.9870       346
-
-    accuracy                         0.9883      1028
-   macro avg     0.9885    0.9883    0.9884      1028
-weighted avg     0.9884    0.9883    0.9883      1028
-
-129/129 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 1.0000 - loss: 9.6035e-04  
-val_accuracy: 0.9805 - val_loss: 0.0763
 ```
----
+## 📈 Model Evaluation Results
 
+### ✅ Best Machine Learning Model: SVM (RBF Kernel)
+          precision    recall  f1-score   support
+       0     0.9802    0.9914    0.9858       349
+       1     0.9970    0.9880    0.9925       333
+       2     0.9884    0.9855    0.9870       346
+
+accuracy                         0.9883      1028
+
+
+### 🤖 Artificial Neural Network (ANN) Results
+
+129/129 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step
+accuracy: 1.0000
+loss: 9.6035e-04
+
+
+> 📌 Although ANN achieved perfect training accuracy, this indicates possible overfitting, highlighting why CNNs are more suitable for image-based tasks.
+
+
+```
 ## 🧠 Why CNN?
 
 CNNs were ultimately preferred because:
