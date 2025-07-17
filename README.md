@@ -12,13 +12,6 @@ This served as a **baseline comparison** to highlight the superior performance o
 <img src="Images/Stone-Paper-Scissors.png" alt="Stone Paper Scissors Game Demo" width="600"/>
 
 ---
-
-## 🗂️ Dataset Overview  
-We used an image dataset containing labeled hand gesture images:
-- `rock/` – images of a closed fist  
-- `paper/` – images of an open hand  
-- `scissors/` – images of two extended fingers  
-
 ## 🗂️ Dataset Overview  
 We used an image dataset containing labeled hand gesture images:
 - `rock/` – images of a closed fist  
